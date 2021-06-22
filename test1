@@ -10,3 +10,18 @@ users/username/workitem
 bugfix/description
 feature/feature-name
 feature/feature-area/feature-name.
+Navigate to your repository and select Branches.
+
+Select the desired new default branch. You need at least two branches in order to change the default. If there's only one, it will already be the default branch. In that case, you must create a second one in order to change the default.
+
+Select the ... beside the desired branch and choose Set as default branch.
+
+Set default branch
+
+Once you've set the new default branch, you may delete the previous one if desired.
+
+Choosing a name
+Git 2.28 added the ability to choose an initial branch name. At the same time, Azure Repos, GitHub, and other Git hosting providers added the ability to choose a different initial branch name. Previously, the default branch was almost always named master. The most popular alternative name is main. Less common options include trunk and development. Absent any restrictions from the tools you use or team you're on, any valid branch name will work.
+
+Updating other systems
+When you change to a different default branch, other parts of your workflow may be affected. You'll need to take these parts into account when you're planning a change.
