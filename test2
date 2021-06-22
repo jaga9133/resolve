@@ -16,3 +16,15 @@ Set up a branch policy for your main branch that:
 
 Requires a pull request to merge code. This approach prevents direct pushes to the main branch and ensures discussion of proposed changes.
 Automatically adds reviewers when a pull request is created. The added team members review the code and comment on the changes in the pull request.
+Update the CI triggers for all pipelines. Designer pipelines can be edited in the web. YAML pipelines can be edited in their respective repositories.
+
+In-flight pull requests
+Retarget each open pull request to the new default branch.
+
+Existing clones
+New clones of the repository will get the new default branch. After the switch, everyone with an existing clone should run git remote set-head origin -a (replacing origin with the name of their remote if it's something else) to update their view of the remote's default branch. Future new branches should be based on the new default.
+
+Incoming links
+Some bookmarks, documents, and other non-code files which point to files in Azure Repos will need to be updated. The branch name for a file or directory can appear in the URL.
+
+If a URL contains a querystring for version (e.g. &version=GBmybranchname), then that URL should be updated. Fortunately, most links to the default branch will not have a version segment and can be left as-is. Also, once you delete the old default branch, attempts to navigate to it will be taken to the new default anyways.
